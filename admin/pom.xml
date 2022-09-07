@@ -7,8 +7,10 @@
     <version>1.1.0</version>
     <name>admin</name>
     <!--  项目描述  -->
-    <description>admin-main project for Spring Boot</description>
+    <description>admin project for Spring Boot</description>
     <modules>
+        <module>api</module>
+        <module>service</module>
         <module>main</module>
     </modules>
     <packaging>pom</packaging>
