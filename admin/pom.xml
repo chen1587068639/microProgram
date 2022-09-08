@@ -90,6 +90,11 @@
                 <artifactId>admin-service</artifactId>
                 <version>${admin}</version>
             </dependency>
+            <dependency>
+                <groupId>com.chen.order.api</groupId>
+                <artifactId>order-api</artifactId>
+                <version>${order}</version>
+            </dependency>
             <!--   项目中其他模块的依赖....end     -->
         </dependencies>
     </dependencyManagement>

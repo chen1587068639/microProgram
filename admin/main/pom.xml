@@ -11,7 +11,8 @@
     </parent>
     <description>admin-main：admin项目对外暴露模块，依赖模块：admin-service</description>
 
-    <dependencies>
+    <dependencies
+    >
         <!--   spring jar     -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -51,8 +52,8 @@
             <artifactId>admin-service</artifactId>
         </dependency>
         <dependency>
-            <groupId>com.chen.order.api</groupId>
-            <artifactId>order-api</artifactId>
+            <groupId>com.chen.admin.service</groupId>
+            <artifactId>admin-service</artifactId>
             <version>1.0.0</version>
             <scope>compile</scope>
         </dependency>

@@ -9,10 +9,13 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
+    <groupId>com.chen.admin.service</groupId>
     <artifactId>admin-service</artifactId>
-    <name>admin-service</name>
-    <description>admin-service：admin项目业务模块，依赖模块：admin-dao模块和其他项目api</description>
 
+    <properties>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
+    </properties>
 
     <dependencies>
         <!--   spring alibaba jar     -->
@@ -24,7 +27,6 @@
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
         </dependency>
-
         <!-- dubbo start -->
         <dependency>
             <groupId>org.apache.dubbo</groupId>
@@ -39,13 +41,8 @@
             <groupId>com.chen.order.api</groupId>
             <artifactId>order-api</artifactId>
         </dependency>
-        <dependency>
-            <groupId>org.apache.dubbo</groupId>
-            <artifactId>dubbo</artifactId>
-            <version>3.0.0</version>
-            <scope>compile</scope>
-        </dependency>
         <!--   项目中其他模块的依赖....end     -->
     </dependencies>
+
 
 </project>
