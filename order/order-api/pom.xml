@@ -11,7 +11,7 @@
 
     <groupId>com.chen.order.api</groupId>
     <artifactId>order-api</artifactId>
-    <description>order-api：order项目对其他项目暴露接口模块，依赖模块：order-service</description>
+    <description>order-api：order项目对其他项目暴露接口模块，依赖模块：无</description>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
@@ -19,10 +19,7 @@
     </properties>
 
     <dependencies>
-        <dependency>
-            <groupId>com.chen.order.service</groupId>
-            <artifactId>order-service</artifactId>
-        </dependency>
+
     </dependencies>
 
 </project>

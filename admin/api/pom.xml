@@ -11,7 +11,7 @@
     <name>admin-api</name>
     <groupId>com.chen.admin.api</groupId>
     <artifactId>admin-api</artifactId>
-    <description>admin-api：admin项目对其他项目暴露接口模块，依赖模块：admin-service</description>
+    <description>admin-api：admin项目对其他项目暴露接口模块，依赖模块：无</description>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
@@ -20,10 +20,7 @@
 
     <dependencies>
         <!--   项目中其他模块的依赖...start     -->
-        <dependency>
-            <groupId>com.chen.admin</groupId>
-            <artifactId>admin-service</artifactId>
-        </dependency>
+
         <!--   项目中其他模块的依赖...end     -->
     </dependencies>
 </project>

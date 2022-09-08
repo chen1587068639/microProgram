@@ -23,8 +23,7 @@
         <spring-boot.version>2.7.3</spring-boot.version>
         <lombok>1.18.10</lombok>
         <common>1.0.0</common>
-        <order-service>1.0.0</order-service>
-        <order-api>1.0.0</order-api>
+        <order>1.0.0</order>
     </properties>
 
     <dependencyManagement>
@@ -53,13 +52,13 @@
             <dependency>
                 <groupId>com.chen.order.api</groupId>
                 <artifactId>order-api</artifactId>
-                <version>${order-api}</version>
+                <version>${order}</version>
                 <scope>compile</scope>
             </dependency>
             <dependency>
                 <groupId>com.chen.order.service</groupId>
                 <artifactId>order-service</artifactId>
-                <version>${order-service}></version>
+                <version>${order}</version>
                 <scope>compile</scope>
             </dependency>
             <!--   项目中其他模块的依赖....end     -->
