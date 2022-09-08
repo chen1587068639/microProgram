@@ -7,7 +7,7 @@
     <groupId>com.chen.common</groupId>
     <artifactId>common</artifactId>
     <version>1.0.0</version>
-
+    <description>项目中其他模块的底层工具依赖，原则上不能依赖其他模块</description>
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>

@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.chen.admin</groupId>
     <artifactId>admin</artifactId>
-    <version>1.1.0</version>
+    <version>1.0.0</version>
     <name>admin</name>
     <!--  项目描述  -->
     <description>admin project for Spring Boot</description>
@@ -20,10 +20,13 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <spring-boot.version>2.7.3</spring-boot.version>
         <common>1.0.0</common>
+        <admin>1.0.0</admin>
+        <order>1.0.0</order>
     </properties>
 
     <dependencies>
     </dependencies>
+    <!--  dependencyManagement:声明子项目使用的依赖版本，集中管理依赖版本  -->
     <dependencyManagement>
         <dependencies>
             <dependency>
@@ -33,6 +36,18 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
+            <!--   项目中其他模块的依赖...start     -->
+            <dependency>
+                <groupId>com.chen.common</groupId>
+                <artifactId>common</artifactId>
+                <version>${common}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.chen.admin</groupId>
+                <artifactId>admin-service</artifactId>
+                <version>${admin}</version>
+            </dependency>
+            <!--   项目中其他模块的依赖....end     -->
         </dependencies>
     </dependencyManagement>
 

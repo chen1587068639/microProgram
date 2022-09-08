@@ -7,16 +7,15 @@
     <parent>
         <artifactId>admin</artifactId>
         <groupId>com.chen.admin</groupId>
-        <version>1.1.0</version>
+        <version>1.0.0</version>
     </parent>
-    <description>admin-main project for Spring Boot</description>
+    <description>admin-main：admin项目对外暴露模块，依赖模块：admin-service</description>
 
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter</artifactId>
         </dependency>
-
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
@@ -28,19 +27,15 @@
                 </exclusion>
             </exclusions>
         </dependency>
+        <!--   项目中其他模块的依赖...start     -->
+        <dependency>
+            <groupId>com.chen.admin</groupId>
+            <artifactId>admin-service</artifactId>
+        </dependency>
+        <!--   项目中其他模块的依赖....end     -->
+
     </dependencies>
 
-    <dependencyManagement>
-        <dependencies>
-            <dependency>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-dependencies</artifactId>
-                <version>${spring-boot.version}</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-        </dependencies>
-    </dependencyManagement>
 
     <build>
         <plugins>

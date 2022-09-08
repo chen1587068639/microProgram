@@ -5,22 +5,26 @@
     <parent>
         <artifactId>admin</artifactId>
         <groupId>com.chen.admin</groupId>
-        <version>1.1.0</version>
+        <version>1.0.0</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>admin-service</artifactId>
     <name>admin-service</name>
+    <description>admin-service：admin项目业务模块，依赖模块：admin-dao模块和其他项目api</description>
+
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
     </properties>
+
     <dependencies>
+        <!--   项目中其他模块的依赖...start     -->
         <dependency>
             <groupId>com.chen.common</groupId>
             <artifactId>common</artifactId>
-            <version>${common}</version>
         </dependency>
+        <!--   项目中其他模块的依赖....end     -->
     </dependencies>
 
 </project>

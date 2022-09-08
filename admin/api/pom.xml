@@ -5,16 +5,25 @@
     <parent>
         <artifactId>admin</artifactId>
         <groupId>com.chen.admin</groupId>
-        <version>1.1.0</version>
+        <version>1.0.0</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
     <name>admin-api</name>
     <groupId>com.chen.admin.api</groupId>
     <artifactId>admin-api</artifactId>
+    <description>admin-api：admin项目对其他项目暴露接口模块，依赖模块：admin-service</description>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
     </properties>
 
+    <dependencies>
+        <!--   项目中其他模块的依赖...start     -->
+        <dependency>
+            <groupId>com.chen.admin</groupId>
+            <artifactId>admin-service</artifactId>
+        </dependency>
+        <!--   项目中其他模块的依赖...end     -->
+    </dependencies>
 </project>
