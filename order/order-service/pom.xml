@@ -25,7 +25,6 @@
 <!--            <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>-->
 <!--        </dependency>-->
 
-
         <dependency>
             <groupId>com.chen.order.api</groupId>
             <artifactId>order-api</artifactId>

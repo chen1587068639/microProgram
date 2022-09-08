@@ -5,12 +5,12 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
 @Slf4j
-@Service
+@Service("adminApi")
 public class AdminApiServiceImpl implements AdminApi {
 
     @Override
     public String testMethod() {
         log.info("进入service层");
-        return "进入service层";
+        return "order api return string";
     }
 }

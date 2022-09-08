@@ -19,10 +19,24 @@
     </properties>
 
     <dependencies>
+        <!--   spring alibaba jar     -->
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+        </dependency>
+
         <!--   项目中其他模块的依赖...start     -->
         <dependency>
             <groupId>com.chen.common</groupId>
             <artifactId>common</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.chen.order.api</groupId>
+            <artifactId>order-api</artifactId>
         </dependency>
         <!--   项目中其他模块的依赖....end     -->
     </dependencies>
