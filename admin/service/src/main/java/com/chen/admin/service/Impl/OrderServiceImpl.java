@@ -16,6 +16,7 @@ public class OrderServiceImpl implements OrderService {
 
     public String callOrder(){
         log.info("执行callOrder方法");
+        //远程调用order模块接口
         return adminApi.testMethod();
     }
 }
