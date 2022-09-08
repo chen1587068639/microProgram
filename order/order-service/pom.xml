@@ -19,6 +19,11 @@
             <scope>compile</scope>
         </dependency>
         <dependency>
+            <groupId>com.chen.common</groupId>
+            <artifactId>common</artifactId>
+            <version>${common}</version>
+        </dependency>
+        <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <version>${lombok}</version>

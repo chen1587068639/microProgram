@@ -22,5 +22,6 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <spring-boot.version>2.7.3</spring-boot.version>
         <lombok>1.18.10</lombok>
+        <common>1.0.0</common>
     </properties>
 </project>

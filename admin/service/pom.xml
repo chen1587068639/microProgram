@@ -15,5 +15,12 @@
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
     </properties>
+    <dependencies>
+        <dependency>
+            <groupId>com.chen.common</groupId>
+            <artifactId>common</artifactId>
+            <version>${common}</version>
+        </dependency>
+    </dependencies>
 
 </project>
