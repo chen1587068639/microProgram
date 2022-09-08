@@ -27,6 +27,8 @@
         <admin>1.0.0</admin>
         <spring-cloud-alibaba-dependencies>2021.1</spring-cloud-alibaba-dependencies>
         <spring-cloud-starter-openfiefeign>3.0.0</spring-cloud-starter-openfiefeign>
+        <dubbo-spring-boot-starter>3.0.0</dubbo-spring-boot-starter>
+        <dubbo>3.0.0</dubbo>
     </properties>
 
     <!--  dependencyManagement:声明子项目使用的依赖版本，集中管理依赖版本  -->
@@ -67,6 +69,14 @@
                 <groupId>org.projectlombok</groupId>
                 <artifactId>lombok</artifactId>
                 <version>${lombok}</version>
+            </dependency>
+            <!--     duboo       -->
+
+            <!-- dubbo start -->
+            <dependency>
+                <groupId>org.apache.dubbo</groupId>
+                <artifactId>dubbo-spring-boot-starter</artifactId>
+                <version>${dubbo-spring-boot-starter}</version>
             </dependency>
 
             <!--   项目中其他模块的依赖...start     -->

@@ -26,6 +26,8 @@
         <order>1.0.0</order>
         <admin>1.0.0</admin>
         <spring-cloud-alibaba-dependencies>2021.1</spring-cloud-alibaba-dependencies>
+        <dubbo-spring-boot-starter>3.0.0</dubbo-spring-boot-starter>
+        <dubbo>3.0.0</dubbo>
     </properties>
 
     <dependencyManagement>
@@ -62,6 +64,13 @@
                 <artifactId>lombok</artifactId>
                 <version>${lombok}</version>
             </dependency>
+            <!-- dubbo start -->
+            <dependency>
+                <groupId>org.apache.dubbo</groupId>
+                <artifactId>dubbo-spring-boot-starter</artifactId>
+                <version>${dubbo-spring-boot-starter}</version>
+            </dependency>
+
             <!--   项目中其他模块的依赖...start     -->
             <dependency>
                 <groupId>com.chen.common</groupId>

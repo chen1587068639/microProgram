@@ -1,6 +1,5 @@
 package com.chen.admin.service.Impl;
 
-import com.alibaba.nacos.api.annotation.NacosInjected;
 import com.chen.admin.service.OrderService;
 import com.chen.order.api.AdminApi;
 import lombok.extern.slf4j.Slf4j;
