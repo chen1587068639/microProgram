@@ -29,6 +29,12 @@
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
         </dependency>
+        <!--     阿里巴巴组件引入       -->
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
+        </dependency>
+
         <!--   项目中其他模块的依赖...start     -->
         <dependency>
             <groupId>com.chen.order.service</groupId>

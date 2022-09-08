@@ -19,6 +19,13 @@
     </properties>
 
     <dependencies>
+        <!--     阿里巴巴组件引入       -->
+<!--        <dependency>-->
+<!--            <groupId>com.alibaba.cloud</groupId>-->
+<!--            <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>-->
+<!--        </dependency>-->
+
+
         <dependency>
             <groupId>com.chen.order.api</groupId>
             <artifactId>order-api</artifactId>
