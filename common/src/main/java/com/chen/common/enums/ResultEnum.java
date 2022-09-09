@@ -33,6 +33,7 @@ public enum ResultEnum implements IResult {
         this.message = message;
     }
 
+
     ResultEnum(Integer code, String message) {
         this.code = code;
         this.message = message;
