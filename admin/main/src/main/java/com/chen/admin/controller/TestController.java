@@ -1,6 +1,7 @@
 package com.chen.admin.controller;
 
 import com.chen.admin.service.OrderService;
+import com.chen.common.entity.Result;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -16,8 +17,8 @@ public class TestController {
     private OrderService orderService;
 
     @GetMapping("/testAdmin")
-    public String testAdmin() {
+    public Result<String> testAdmin() {
         log.info("执行testAdmin方法");
-        return orderService.callOrder();
+        return Result.success(orderService.callOrder());
     }
 }
