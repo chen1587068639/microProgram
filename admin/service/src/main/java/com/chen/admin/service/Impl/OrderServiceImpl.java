@@ -11,12 +11,13 @@ import org.springframework.stereotype.Service;
 @Service
 public class OrderServiceImpl implements OrderService {
 
-    @DubboReference
-    private AdminApi adminApi;
+//    @DubboReference
+//    private AdminApi adminApi;
 
     public String callOrder(){
         log.info("执行callOrder方法");
-        //远程调用order模块接口
-        return adminApi.testMethod();
+//        //远程调用order模块接口
+//        return adminApi.testMethod();
+        return "callOrder";
     }
 }
