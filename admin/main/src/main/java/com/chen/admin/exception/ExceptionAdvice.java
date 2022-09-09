@@ -1,8 +1,6 @@
 package com.chen.admin.exception;
 
 import com.chen.common.entity.Result;
-import com.chen.common.enums.ResultEnum;
-import com.chen.common.exception.BusinessException;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
