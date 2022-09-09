@@ -29,24 +29,6 @@ public class RequestLogAspect {
     public void requestServer() {
     }
 
-//    /**
-//     * 打印请求的信息
-//     * @param joinPoint:切面信息
-//     */
-//    @Before("requestServer()")
-//    public void logBefore(JoinPoint joinPoint){
-//        ServletRequestAttributes attributes = (ServletRequestAttributes)
-//                RequestContextHolder.getRequestAttributes();
-//        assert attributes != null;
-//        HttpServletRequest request = attributes.getRequest();
-//        //打印请求参数
-//        log.info("IP:{},URL:{}, HTTP Method:{} ,Class Method:{}.{}",request.getRemoteAddr(),request.getRequestURL().toString(),request.getMethod(),joinPoint.getSignature().getDeclaringTypeName(), joinPoint.getSignature().getName());
-//    }
-//
-//    @After("requestServer()")
-//    public void doAfter(JoinPoint joinPoint) {
-//        log.info("request: {}.{} end",joinPoint.getSignature().getDeclaringTypeName(), joinPoint.getSignature().getName());
-//    }
     @Around("requestServer()")
     public Object logAround(ProceedingJoinPoint proceedingJoinPoint) throws Throwable {
         long start = System.currentTimeMillis();
@@ -87,6 +69,25 @@ public class RequestLogAspect {
             log.info("Request Error Info : {}", JSON.toJSONString(requestErrorEntity));
         }
     }
+
+//    /**
+//     * 打印请求的信息
+//     * @param joinPoint:切面信息
+//     */
+//    @Before("requestServer()")
+//    public void logBefore(JoinPoint joinPoint){
+//        ServletRequestAttributes attributes = (ServletRequestAttributes)
+//                RequestContextHolder.getRequestAttributes();
+//        assert attributes != null;
+//        HttpServletRequest request = attributes.getRequest();
+//        //打印请求参数
+//        log.info("IP:{},URL:{}, HTTP Method:{} ,Class Method:{}.{}",request.getRemoteAddr(),request.getRequestURL().toString(),request.getMethod(),joinPoint.getSignature().getDeclaringTypeName(), joinPoint.getSignature().getName());
+//    }
+//
+//    @After("requestServer()")
+//    public void doAfter(JoinPoint joinPoint) {
+//        log.info("request: {}.{} end",joinPoint.getSignature().getDeclaringTypeName(), joinPoint.getSignature().getName());
+//    }
 
     /**
      * 获取入参
