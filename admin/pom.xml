@@ -86,7 +86,7 @@
                 <version>${common}</version>
             </dependency>
             <dependency>
-                <groupId>com.chen.admin</groupId>
+                <groupId>com.chen.admin.service</groupId>
                 <artifactId>admin-service</artifactId>
                 <version>${admin}</version>
             </dependency>

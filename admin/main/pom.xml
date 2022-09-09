@@ -48,7 +48,7 @@
         </dependency>
         <!--   项目中其他模块的依赖...start     -->
         <dependency>
-            <groupId>com.chen.admin</groupId>
+            <groupId>com.chen.admin.service</groupId>
             <artifactId>admin-service</artifactId>
         </dependency>
         <!--   项目中其他模块的依赖....end     -->
