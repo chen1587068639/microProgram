@@ -1,10 +1,16 @@
 package com.chen.admin.exception;
 
 import com.chen.common.entity.Result;
+import com.chen.common.enums.ResultEnum;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.util.StringUtils;
+import org.springframework.validation.BindingResult;
+import org.springframework.validation.FieldError;
+import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
+import javax.validation.ConstraintViolationException;
 import java.io.IOException;
 
 @RestControllerAdvice(basePackages = "com.chen.admin")
@@ -63,6 +69,36 @@ public class ExceptionAdvice {
     @ExceptionHandler({RuntimeException.class})
     public Result<?> handleBusinessException(RuntimeException e){
         return Result.failed(e.getMessage());
+    }
+
+
+    /**
+     * {@code @RequestBody} 参数校验不通过时抛出的异常处理
+     */
+    @ExceptionHandler({MethodArgumentNotValidException.class})
+    public Result<?> handleMethodArgumentNotValidException(MethodArgumentNotValidException ex) {
+        BindingResult bindingResult = ex.getBindingResult();
+        StringBuilder sb = new StringBuilder("校验失败:");
+        for (FieldError fieldError : bindingResult.getFieldErrors()) {
+            sb.append(fieldError.getField()).append("：").append(fieldError.getDefaultMessage()).append(", ");
+        }
+        String msg = sb.toString();
+        if (StringUtils.hasText(msg)) {
+            return Result.failed(msg);
+        }
+        return Result.failed(ResultEnum.VALIDATE_FAILED);
+    }
+
+    /**
+     * {@code @PathVariable} 和 {@code @RequestParam} 参数校验不通过时抛出的异常处理
+     */
+    @ExceptionHandler({ConstraintViolationException.class})
+    public Result<?> handleConstraintViolationException(ConstraintViolationException ex) {
+        log.info("@PathVariable/@RequestParam param 校验失败");
+        if (StringUtils.hasText(ex.getMessage())) {
+            return Result.failed(ex.getMessage());
+        }
+        return Result.failed(ResultEnum.VALIDATE_FAILED);
     }
 
     /**
