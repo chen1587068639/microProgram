@@ -16,7 +16,7 @@ public class TestController {
     private OrderService orderService;
 
     @GetMapping("/testAdmin")
-    public String testAdmin(){
+    public String testAdmin() {
         log.info("执行testAdmin方法");
         return orderService.callOrder();
     }
