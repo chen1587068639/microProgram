@@ -94,7 +94,6 @@ public class ExceptionAdvice {
      */
     @ExceptionHandler({ConstraintViolationException.class})
     public Result<?> handleConstraintViolationException(ConstraintViolationException ex) {
-        log.info("@PathVariable/@RequestParam param 校验失败");
         if (StringUtils.hasText(ex.getMessage())) {
             return Result.failed(ex.getMessage());
         }
