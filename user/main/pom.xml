@@ -3,14 +3,14 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>order</artifactId>
-        <groupId>com.chen.order</groupId>
+        <artifactId>user</artifactId>
+        <groupId>com.chen.user</groupId>
         <version>1.0.0</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>order-main</artifactId>
-    <description>order-main：order项目对外暴露模块，依赖模块：order-service</description>
+    <artifactId>user-main</artifactId>
+
 
     <dependencies>
         <dependency>
@@ -37,9 +37,10 @@
 
         <!--   项目中其他模块的依赖...start     -->
         <dependency>
-            <groupId>com.chen.order.service</groupId>
-            <artifactId>order-service</artifactId>
+            <groupId>com.chen.user.service</groupId>
+            <artifactId>user-service</artifactId>
         </dependency>
         <!--   项目中其他模块的依赖....end     -->
     </dependencies>
+
 </project>

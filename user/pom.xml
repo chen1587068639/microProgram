@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.chen.user</groupId>
+    <artifactId>user</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0.0</version>
+    <modules>
+        <module>api</module>
+        <module>service</module>
+        <module>main</module>
+    </modules>
+
+
+    <properties>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
+        <java.version>1.8</java.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <spring-boot.version>2.4.2</spring-boot.version>
+        <lombok>1.18.10</lombok>
+        <common>1.0.0</common>
+        <order>1.0.0</order>
+        <admin>1.0.0</admin>
+        <user>1.0.0</user>
+        <spring-cloud-alibaba-dependencies>2021.1</spring-cloud-alibaba-dependencies>
+        <dubbo-spring-boot-starter>3.0.0</dubbo-spring-boot-starter>
+        <dubbo>3.0.0</dubbo>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <!--    spring提供的多种依赖的版本，起到约束作用        -->
+            <!--            <dependency>-->
+            <!--                <groupId>com.alibaba.cloud</groupId>-->
+            <!--                <artifactId>spring-cloud-alibaba-dependencies</artifactId>-->
+            <!--                <version>2.2.5.RELEASE</version>-->
+            <!--                <type>pom</type>-->
+            <!--                <scope>import</scope>-->
+            <!--            </dependency>-->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter</artifactId>
+                <version>${spring-boot.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-web</artifactId>
+                <version>${spring-boot.version}</version>
+            </dependency>
+            <!--     阿里巴巴组件引入       -->
+            <dependency>
+                <groupId>com.alibaba.cloud</groupId>
+                <artifactId>spring-cloud-alibaba-dependencies</artifactId>
+                <version>${spring-cloud-alibaba-dependencies}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <!--     日志依赖       -->
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>${lombok}</version>
+            </dependency>
+            <!-- dubbo start -->
+            <dependency>
+                <groupId>org.apache.dubbo</groupId>
+                <artifactId>dubbo-spring-boot-starter</artifactId>
+                <version>${dubbo-spring-boot-starter}</version>
+            </dependency>
+
+            <!--   项目中其他模块的依赖...start     -->
+            <dependency>
+                <groupId>com.chen.common</groupId>
+                <artifactId>common</artifactId>
+                <version>${common}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.chen.order.api</groupId>
+                <artifactId>order-api</artifactId>
+                <version>${order}</version>
+                <scope>compile</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.chen.user.api</groupId>
+                <artifactId>user-api</artifactId>
+                <version>${user}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.chen.user.service</groupId>
+                <artifactId>user-service</artifactId>
+                <version>${user}</version>
+            </dependency>
+            <!--   项目中其他模块的依赖....end     -->
+        </dependencies>
+    </dependencyManagement>
+</project>

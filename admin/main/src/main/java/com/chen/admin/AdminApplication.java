@@ -8,10 +8,10 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 @SpringBootApplication
 @EnableDiscoveryClient //nacos
 @EnableDubbo //dubbo
-public class MainApplication {
+public class AdminApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(MainApplication.class, args);
+        SpringApplication.run(AdminApplication.class, args);
         System.out.println("hello admin");
     }
 
