@@ -10,7 +10,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>order-main</artifactId>
-    <description>order-main：order项目对外暴露模块，依赖模块：order-service</description>
+    <description>order-main：order项目对外暴露模块，依赖模块：order-service，common</description>
 
     <dependencies>
         <dependency>

@@ -37,6 +37,7 @@
             <artifactId>dubbo-spring-boot-starter</artifactId>
         </dependency>
 
+        <!--   项目中其他模块的依赖...start     -->
         <dependency>
             <groupId>com.chen.user.api</groupId>
             <artifactId>user-api</artifactId>
@@ -45,5 +46,6 @@
             <groupId>com.chen.common</groupId>
             <artifactId>common</artifactId>
         </dependency>
+        <!--   项目中其他模块的依赖....end     -->
     </dependencies>
 </project>

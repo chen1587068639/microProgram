@@ -9,7 +9,7 @@
         <groupId>com.chen.admin</groupId>
         <version>1.0.0</version>
     </parent>
-    <description>admin-main：admin项目对外暴露模块，依赖模块：admin-service</description>
+    <description>admin-main：admin项目对外暴露模块，依赖模块：admin-service，common</description>
 
     <dependencies
     >

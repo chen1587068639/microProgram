@@ -10,6 +10,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>user-main</artifactId>
+    <description>user-main：order项目对外暴露模块，依赖模块：user-service，common</description>
 
 
     <dependencies>
