@@ -30,6 +30,7 @@
         <dubbo-spring-boot-starter>3.0.0</dubbo-spring-boot-starter>
         <dubbo>3.0.0</dubbo>
         <aspectjweaver>1.9.3</aspectjweaver>
+        <jjwt>0.9.1</jjwt>
     </properties>
 
     <!--  dependencyManagement:声明子项目使用的依赖版本，集中管理依赖版本  -->
@@ -62,6 +63,11 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-security</artifactId>
                 <version>${spring-boot.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.jsonwebtoken</groupId>
+                <artifactId>jjwt</artifactId>
+                <version>${jjwt}</version>
             </dependency>
             <dependency>
                 <groupId>org.springframework.boot</groupId>
