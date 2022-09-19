@@ -28,6 +28,7 @@
         <spring-cloud-alibaba-dependencies>2021.1</spring-cloud-alibaba-dependencies>
         <dubbo-spring-boot-starter>3.0.0</dubbo-spring-boot-starter>
         <dubbo>3.0.0</dubbo>
+        <spring-cloud-start-alibaba-sentinel>2.2.6.RELEASE</spring-cloud-start-alibaba-sentinel>
     </properties>
 
     <dependencyManagement>
@@ -57,6 +58,11 @@
                 <version>${spring-cloud-alibaba-dependencies}</version>
                 <type>pom</type>
                 <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.alibaba.cloud</groupId>
+                <artifactId>spring-cloud-start-alibaba-sentinel</artifactId>
+                <version>${spring-cloud-start-alibaba-sentinel}</version>
             </dependency>
             <!--     日志依赖       -->
             <dependency>
